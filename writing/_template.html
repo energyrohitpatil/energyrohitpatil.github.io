@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARTICLE_TITLE — Rohit Patil</title>
+  <meta name="description" content="ARTICLE_EXCERPT" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --border: #1f2d45;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.15);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --tag-bg: #1e3a5f;
+      --tag-text: #93c5fd;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 60px 24px 120px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      margin-bottom: 48px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    .article-meta {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #f1f5f9 0%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .byline {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .article-body {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .article-body p { margin-bottom: 24px; }
+    .article-body p:last-child { margin-bottom: 0; }
+    .article-body strong { color: var(--text); font-weight: 500; }
+
+    .article-body h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 40px 0 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .article-body h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 32px 0 12px;
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 0 0 24px 24px;
+      color: var(--muted);
+    }
+
+    .article-body li { margin-bottom: 8px; line-height: 1.7; }
+
+    .article-body blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 24px;
+      margin: 32px 0;
+      background: var(--surface);
+      border-radius: 0 8px 8px 0;
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-name {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <a href="/" class="back-link">← rohitpatil.io</a>
+
+    <div class="article-meta">ARTICLE_DATE · ARTICLE_TOPIC</div>
+    <h1>ARTICLE_TITLE</h1>
+    <div class="byline">By Rohit Patil · ARTICLE_READ_TIME read</div>
+
+    <div class="article-body">
+      ARTICLE_BODY
+    </div>
+
+    <footer class="footer">
+      <span class="footer-name">Rohit Patil</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/roheet/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:energy@rohitpatil.io">energy@rohitpatil.io</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

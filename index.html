@@ -248,6 +248,142 @@
       border: 1px solid rgba(59,130,246,0.2);
     }
 
+    /* Portfolio */
+    .portfolio-list { display: flex; flex-direction: column; gap: 16px; }
+
+    .portfolio-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: border-color 0.2s;
+    }
+    .portfolio-item:hover { border-color: var(--accent); }
+
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      gap: 16px;
+    }
+
+    .portfolio-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .portfolio-scale {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+
+    .portfolio-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .portfolio-tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: 1px solid rgba(59,130,246,0.2);
+    }
+
+    /* Press */
+    .press-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .press-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s;
+    }
+    .press-item:hover { border-color: var(--accent); }
+
+    .press-pub {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+      min-width: 100px;
+      padding-top: 2px;
+    }
+
+    .press-headline {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .press-placeholder {
+      font-size: 14px;
+      color: var(--muted);
+      font-style: italic;
+      padding: 8px 0;
+    }
+
+    /* Writing */
+    .writing-list { display: flex; flex-direction: column; gap: 16px; }
+
+    .writing-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s;
+    }
+    .writing-item:hover { border-color: var(--accent); }
+
+    .writing-left { flex: 1; }
+
+    .writing-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .writing-excerpt {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .writing-meta {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      margin-left: 16px;
+      padding-top: 2px;
+    }
+
     /* Currently building */
     .building-card {
       background: var(--surface);
@@ -398,6 +534,93 @@
       </div>
     </section>
 
+    <!-- Portfolio -->
+    <section class="section">
+      <div class="section-label">Selected Work</div>
+      <div class="portfolio-list">
+
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <div class="portfolio-title">Google "Regulus" — Utility-Scale Solar Program</div>
+            <div class="portfolio-scale">$145M · 82 MW</div>
+          </div>
+          <p class="portfolio-desc">
+            Designed modular solar design blocks that became the replicable template across Google's
+            GW-scale pipeline. Compressed per-project engineering cycles while maintaining
+            interconnection and structural integrity across diverse site conditions.
+          </p>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">Utility-Scale Solar</span>
+            <span class="portfolio-tag">Design Standardization</span>
+            <span class="portfolio-tag">Google</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <div class="portfolio-title">Frito-Lay / PepsiCo Fleet Electrification Microgrid</div>
+            <div class="portfolio-scale">First-of-Kind</div>
+          </div>
+          <p class="portfolio-desc">
+            Architected the first integrated Solar + BESS + Class-8 EV charging microgrid for
+            a commercial fleet depot. No prior industry template existed. Established the
+            blueprint now referenced across depot electrification projects.
+          </p>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">Microgrid</span>
+            <span class="portfolio-tag">Fleet Electrification</span>
+            <span class="portfolio-tag">BESS</span>
+            <span class="portfolio-tag">Class-8 EV</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <div class="portfolio-title">Tesla Gigafactory — Enterprise Energy Infrastructure</div>
+            <div class="portfolio-scale">Tesla · 2018–2024</div>
+          </div>
+          <p class="portfolio-desc">
+            Led engineering programs for enterprise-scale energy infrastructure at Tesla.
+            Managed cross-functional teams across solar, storage, and EV charging deployments
+            at sites requiring unprecedented integration complexity.
+          </p>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">Energy Infrastructure</span>
+            <span class="portfolio-tag">Tesla</span>
+            <span class="portfolio-tag">Solar + Storage</span>
+            <span class="portfolio-tag">EV Charging</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-header">
+            <div class="portfolio-title">New Leaf Energy — 3+ GW Portfolio</div>
+            <div class="portfolio-scale">3+ GW · $1B+</div>
+          </div>
+          <p class="portfolio-desc">
+            Built and led a 30+ person engineering organization managing a 3+ GW pipeline of
+            utility-scale solar, BESS, and emerging technology projects — from site acquisition
+            through interconnection, permitting, and financial close.
+          </p>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag">Portfolio Management</span>
+            <span class="portfolio-tag">Team Leadership</span>
+            <span class="portfolio-tag">Utility-Scale Solar</span>
+            <span class="portfolio-tag">BESS</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Press -->
+    <section class="section">
+      <div class="section-label">Press & Recognition</div>
+      <div class="press-list" id="press-list">
+        <p class="press-placeholder">Coverage incoming — check back soon.</p>
+      </div>
+    </section>
+
     <!-- Focus Areas -->
     <section class="section">
       <div class="section-label">Focus Areas</div>
@@ -412,6 +635,14 @@
         <span class="tag">Investment Memos</span>
         <span class="tag">Energy Markets</span>
         <span class="tag">Innovation Portfolio Management</span>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section class="section">
+      <div class="section-label">Writing</div>
+      <div class="writing-list" id="writing-list">
+        <!-- articles inserted here -->
       </div>
     </section>
 
